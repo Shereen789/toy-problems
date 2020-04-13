@@ -13,6 +13,7 @@ class LRU:
                  self.cache.popitem(last = False)
         self.cache[key] = value
     def get(self,key):
-        pass
+        if key in self.cache.keys():
+            return self.cache[key]
     def getcache(self):
-        pass
+        return self.cache
